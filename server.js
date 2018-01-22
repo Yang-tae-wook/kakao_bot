@@ -19,7 +19,22 @@ app.get('/keyboard',function(req,res){ // setting keyboard for first open
   res.send(keyboard);
 });
 
+app.post('/message', function(req,res){
+  let user_key = decodeURIComponent(req.body.user_key); // user's key
+  let type = decodeURIComponent(req.body.type); // message type
+  let content = decodeURIComponent(req.body.content); // user's message
+  console.log(user_key);
+  console.log(type);
+  console.log(content);
+
+  let answer = {
+    "message":{
+      "text":"your message is arrieved server : "+content // in case 'text'
+    }
+  }
+  res.send(answer);
+
+
 app.listen(3000,function(){
   console.log('Connect 3000 port!')
 });
-
