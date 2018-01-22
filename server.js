@@ -33,7 +33,7 @@ app.post('/message', function(req,res){
     }
   }
   res.send(answer);
-
+});
 
 app.listen(3000,function(){
   console.log('Connect 3000 port!')
