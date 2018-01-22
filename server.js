@@ -16,3 +16,8 @@ app.get('/keyboard',function(req,res){ // setting keyboard for first open
   };
   res.send(keyboard);
 });
+
+app.listen(3000,function(){
+  console.log('Connect 3000 port!')
+});
+
