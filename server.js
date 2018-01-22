@@ -3,7 +3,9 @@ var app = express();
 var bodyParser = require('body-parser');
 
 app.use(bodyParser.json());
-
+app.get('/',function(req,res){
+	res.send('Hello World');
+});
 
 app.get('/keyboard',function(req,res){ // setting keyboard for first open
   let keyboard = {
